@@ -77,8 +77,8 @@
 
 				<div class="box box2"> 
 					<div class="text"> 
-						<h2 class="topic-heading">230º</h2> 
 						<h2 class="topic">SENSOR 2</h2> 
+						<h2 class="topic-heading" id="temperatura2">temperatura2</h2> <!-- Adicionando o ID para acesso via JavaScript -->
 					</div> 
 
 					<img src= "./images/TEMP.png"
@@ -87,8 +87,8 @@
 
 				<div class="box box3"> 
 					<div class="text"> 
-						<h2 class="topic-heading">228º</h2> 
 						<h2 class="topic">SENSOR 3</h2> 
+						<h2 class="topic-heading" id="temperatura3">temperatura3</h2> <!-- Adicionando o ID para acesso via JavaScript -->
 					</div> 
 
 					<img src="./images/TEMP.png"
@@ -97,8 +97,8 @@
 
 				<div class="box box4"> 
 					<div class="text"> 
-						<h2 class="topic-heading">229,3º</h2> 
-						<h2 class="topic">TENSOR 4</h2> 
+						<h2 class="topic">SENSOR 4</h2> 
+						<h2 class="topic-heading" id="temperatura4">temperatura4</h2> <!-- Adicionando o ID para acesso via JavaScript -->
 					</div> 
 
 					<img src="./images/TEMP.png" alt="published"> 
@@ -119,6 +119,7 @@
                         <p>Temperatura 1: ${data.temperatura1}</p>
                         <p>Temperatura 2: ${data.temperatura2}</p>
                         <p>Temperatura 3: ${data.temperatura3}</p>
+						<p>Temperatura 4: ${data.temperatura4}</p>
                     `;
                 })
                 .catch(error => console.error('Erro ao buscar temperaturas:', error));
@@ -130,9 +131,15 @@
 <script>
     // Suponha que você tenha recuperado o valor da temperatura1 do servidor e armazenado em uma variável chamada temperatura1
     var temperatura1 = 229; // Exemplo de valor de temperatura1
+	var temperatura2 = 230; // Exemplo de valor de temperatura1
+	var temperatura3 = 231; // Exemplo de valor de temperatura1
+	var temperatura4 = 230; // Exemplo de valor de temperatura1
 
     // Atualiza o conteúdo da tag h2 com o valor da temperatura1
     document.getElementById('temperatura1').innerText = temperatura1.toFixed(1) + 'º'; // Arredonda para uma casa decimal e adiciona "º" no final
+	document.getElementById('temperatura2').innerText = temperatura2.toFixed(1) + 'º'; // Arredonda para uma casa decimal e adiciona "º" no final
+	document.getElementById('temperatura3').innerText = temperatura3.toFixed(1) + 'º'; // Arredonda para uma casa decimal e adiciona "º" no final
+	document.getElementById('temperatura4').innerText = temperatura4.toFixed(1) + 'º'; // Arredonda para uma casa decimal e adiciona "º" no final
 </script>
 	<script src="js/scrpritdash.js"></script> 
 </body> 
