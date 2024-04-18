@@ -106,7 +106,28 @@
 			</div> 
 		</div> 
 	</div> 
+	<div id="temperaturas"></div>
 
+    <script>
+        // Função para buscar as temperaturas do servidor
+        function buscarTemperaturas() {
+            fetch('/temperaturas') // Endpoint do servidor para buscar as temperaturas
+                .then(response => response.json())
+                .then(data => {
+                    // Atualiza o conteúdo HTML com as temperaturas
+                    document.getElementById('temperaturas').innerHTML = `
+                        <p>Temperatura 1: ${data.temperatura1}</p>
+                        <p>Temperatura 2: ${data.temperatura2}</p>
+                        <p>Temperatura 3: ${data.temperatura3}</p>
+                    `;
+                })
+                .catch(error => console.error('Erro ao buscar temperaturas:', error));
+        }
+
+        // Chama a função para buscar as temperaturas assim que a página carrega
+        window.onload = buscarTemperaturas;
+    </script>
+	
 	<script src="js/scrpritdash.js"></script> 
 </body> 
 </html>
