@@ -28,3 +28,8 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+    // Suponha que você tenha recuperado o valor da temperatura1 do servidor e armazenado em uma variável chamada temperatura1
+    var temperatura1 = 25.5; // Exemplo de valor de temperatura1
+
+    // Atualiza o conteúdo do parágrafo com o valor da temperatura1
+    document.getElementById('temperatura1').innerText = temperatura1.toFixed(1) + 'º'; // Arredonda para uma casa decimal e adiciona "º" no final

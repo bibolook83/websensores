@@ -67,8 +67,8 @@
 
 				<div class="box box1"> 
 					<div class="text"> 
-						<h2 class="topic-heading">200,3º</h2> 
-						<h2 class="topic">SENSOR 1</h2> 
+						<h2 class="topic">SENSOR 1</h2>
+						<h2 class="topic-heading" id="temperatura1">temperatura1</h2> <!-- Adicionando o ID para acesso via JavaScript -->
 					</div> 
 
 					<img src="./images/TEMP.png"
@@ -127,7 +127,13 @@
         // Chama a função para buscar as temperaturas assim que a página carrega
         window.onload = buscarTemperaturas;
     </script>
-	
+<script>
+    // Suponha que você tenha recuperado o valor da temperatura1 do servidor e armazenado em uma variável chamada temperatura1
+    var temperatura1 = 229; // Exemplo de valor de temperatura1
+
+    // Atualiza o conteúdo da tag h2 com o valor da temperatura1
+    document.getElementById('temperatura1').innerText = temperatura1.toFixed(1) + 'º'; // Arredonda para uma casa decimal e adiciona "º" no final
+</script>
 	<script src="js/scrpritdash.js"></script> 
 </body> 
 </html>
